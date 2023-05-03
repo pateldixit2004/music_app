@@ -13,10 +13,11 @@ class Home_Screen extends StatefulWidget {
 class _Home_ScreenState extends State<Home_Screen> {
   musicprovider? providerF;
   musicprovider? providerT;
+
   @override
   void initState() {
     super.initState();
-    providerT.p
+    Provider.of<musicprovider>(context,listen: false).inlita();
   }
   @override
   Widget build(BuildContext context) {

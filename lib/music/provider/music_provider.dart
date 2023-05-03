@@ -7,6 +7,6 @@ class musicprovider extends ChangeNotifier
   {
     AssetsAudioPlayer? assetsAudioPlayer =AssetsAudioPlayer();
 
-    assetsAudioPlayer.open(Audio.network("https://www.youtube.com/watch?v=EdftT8GMU1U"));
+    assetsAudioPlayer!.open(Audio("aaets/audio/s1.mp3"),autoStart: false,);
   }
 }
