@@ -11,14 +11,17 @@ class Home_Screen extends StatefulWidget {
 }
 
 class _Home_ScreenState extends State<Home_Screen> {
-  musicprovider? providerF;
-  musicprovider? providerT;
+
 
   @override
   void initState() {
     super.initState();
     Provider.of<musicprovider>(context,listen: false).inlita();
   }
+
+
+  musicprovider? providerF;
+  musicprovider? providerT;
   @override
   Widget build(BuildContext context) {
 
@@ -75,8 +78,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                     }, icon: Icon(Icons.arrow_back_ios)),
                     FloatingActionButton(backgroundColor: Colors.black,onPressed: () {
 
-
-                      if(providerF!.isplay)
+                      // providerF!.inlita();
+                      if(providerF!.assetsAudioPlayer.isPlaying.value)
                       {
                         providerF!.playmusic();
                       }
