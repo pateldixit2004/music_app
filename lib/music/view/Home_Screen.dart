@@ -28,16 +28,16 @@ class _Home_ScreenState extends State<Home_Screen> {
     return SafeArea(child: Scaffold(
       body: Stack(
         children: [
-          Container(
-
-            height: 100.h,
-            width: 100.h,
-
-            // child: Image.asset("assets/image/img_1.png",height: 100.h,width: 100.w,),
-            decoration: BoxDecoration(
-              image:DecorationImage(image: AssetImage("assets/image/img.png"),fit: BoxFit.fill)
-            ),
-          ),
+          // Container(
+          //
+          //   height: 100.h,
+          //   width: 100.h,
+          //
+          //   // child: Image.asset("assets/image/img_1.png",height: 100.h,width: 100.w,),
+          //   decoration: BoxDecoration(
+          //     image:DecorationImage(image: AssetImage("assets/image/img.png"),fit: BoxFit.fill)
+          //   ),
+          // ),
           Align(
             alignment: Alignment.topCenter,
             child: Container(
@@ -74,7 +74,16 @@ class _Home_ScreenState extends State<Home_Screen> {
 
                     }, icon: Icon(Icons.arrow_back_ios)),
                     FloatingActionButton(backgroundColor: Colors.black,onPressed: () {
-                      
+
+
+                      if(providerF!.isplay)
+                      {
+                        providerF!.playmusic();
+                      }
+                      else
+                      {
+                        providerF!.stopmusic();
+                      }
                     },child: Icon(Icons.pause,color:Colors.white,),),
                     IconButton(onPressed: () {
 
